@@ -1,0 +1,36 @@
+.testimonials {
+  width: 100%;
+  height: 710px;
+  background-color: var(--bg-primary-color);
+  border-radius: 50px;
+  padding: 60px 0px;
+  overflow: hidden;
+}
+
+.testimonials h1 {
+  font-size: 40px;
+  margin-left: 100px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.icon-arrow {
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .testimonials h1 {
+    font-size: 30px;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 1120px;
+  }
+}

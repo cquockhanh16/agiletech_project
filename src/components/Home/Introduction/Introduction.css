@@ -1,0 +1,46 @@
+.introduction {
+  background-color: #f063b826;
+  border-radius: 50px;
+  display: flex;
+  padding: 20px 50px;
+  align-items: center;
+  gap: 50px;
+}
+
+.introduction h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.introduction p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--text-color-light);
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .introduction {
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+  }
+  .introduction p {
+    text-align: center;
+  }
+  .introduction img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 1120px;
+  }
+}

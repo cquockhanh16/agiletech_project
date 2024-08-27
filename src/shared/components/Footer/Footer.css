@@ -1,0 +1,115 @@
+footer {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.footer__contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  font-size: 16px;
+}
+
+.footer__contact-infor div:first-child {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer__contact-infor div:first-child img {
+  width: 40px;
+  height: 30px;
+}
+
+.footer__contact-infor div:first-child p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.footer__contact ul li {
+  margin-bottom: 15px;
+}
+
+.footer__contact-social span {
+  width: 50px;
+  height: 50px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+}
+
+.icon-social {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer__contact-about,
+.footer__contact-help {
+  font-weight: 400;
+}
+
+.footer__contact-social span:hover {
+  background-color: #f063b8;
+}
+
+.footer__copyright {
+  margin-top: 40px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright div {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e6d3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.footer__copyright div:hover .icon-chat {
+  transform: scale(1.1);
+}
+
+.icon-chat {
+  color: #9c69e2;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .footer__contact {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer__contact-infor div:first-child {
+    justify-content: center;
+  }
+  .footer__copyright {
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 1120px;
+  }
+}

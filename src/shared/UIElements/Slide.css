@@ -1,0 +1,142 @@
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: #fff;
+}
+
+.slick-prev,
+.slick-next {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slick-prev {
+  margin-left: 50px;
+}
+
+.slick-next {
+  margin-right: 50px;
+}
+
+.slick-list {
+  text-align: center;
+  overflow: unset;
+}
+
+.slide {
+  background-color: #fff;
+  width: 932px !important;
+  height: 330px !important;
+  border-radius: 20px;
+  padding: 50px 100px;
+  position: relative;
+}
+
+.slide-shadow {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  height: calc(100%);
+  right: 0;
+  background-color: #8d4bea;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.slide-image {
+  position: absolute;
+
+  width: calc(30% - 100px);
+}
+
+.slide-image img {
+  width: 130px;
+  height: 90px;
+  object-fit: fill;
+}
+
+.slide-content {
+  text-align: left;
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  width: calc(70% - 100px);
+  padding-right: 150px;
+}
+
+.slide-content h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.slide-content span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9c69e2;
+}
+
+.slide-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4b5d68;
+}
+
+.slick-dots {
+  bottom: -130px;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button::before {
+  color: #fff;
+  opacity: 1;
+  font-size: 6px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f063b8;
+  opacity: 1;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .slide {
+    width: 90% !important;
+    height: 400px !important;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .slide-content {
+    padding-right: 0;
+    width: 100%;
+    left: 0;
+  }
+  .slide-content,
+  .slide-image {
+    position: relative;
+  }
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+  .slide-content p {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 1120px;
+  }
+}
