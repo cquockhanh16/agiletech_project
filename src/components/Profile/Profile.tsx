@@ -188,45 +188,47 @@ const Profile: React.FC<LoginProps> = ({ onLogout }) => {
             <button onClick={() => setShowFormEdit(false)}>Cancel</button>
           </div>
         )}
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Tags</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data &&
-              data.posts.map((item, index) => {
-                return (
-                  <tr key={item.id + index}>
-                    <td>{item.id}</td>
-                    <td>{item.title}</td>
-                    <td>{item.description}</td>
-                    <td>
-                      {typeof item.tags === "object"
-                        ? item.tags.map((item) => item.tag).join(", ")
-                        : item.tags}
-                    </td>
-                    <td>
-                      <button>
-                        <RiPencilLine
-                          onClick={() => editPost(item.id)}
-                          className='action-icon'
-                        />
-                      </button>
-                      <button onClick={() => deletePostById(item.id)}>
-                        <ImBin2 className='action-icon' />
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table>
+        <div className="container_tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Tags</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data &&
+                data.posts.map((item, index) => {
+                  return (
+                    <tr key={item.id + index}>
+                      <td>{item.id}</td>
+                      <td>{item.title}</td>
+                      <td>{item.description}</td>
+                      <td>
+                        {typeof item.tags === "object"
+                          ? item.tags.map((item) => item.tag).join(", ")
+                          : item.tags}
+                      </td>
+                      <td>
+                        <button>
+                          <RiPencilLine
+                            onClick={() => editPost(item.id)}
+                            className='action-icon'
+                          />
+                        </button>
+                        <button onClick={() => deletePostById(item.id)}>
+                          <ImBin2 className='action-icon' />
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
         <div>
           <Paginate
             setData={setData}
